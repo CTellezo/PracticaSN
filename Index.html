@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title> Salario Neto</title>
+</head>
+
+<body onload="calcular()">
+  <div class="container text-center">
+    <div class="display-2">Salario Neto</div>
+<table class="table table-red">
+<tr>
+  <td class="bg-success">Puesto</td>
+  <td class="bg-primary">Horas</td>
+  <td class="bg-primary-subtle">Antiguedad</td>
+</tr>
+<tr>
+  <td>
+    <select id="empleo" class="form-control" onchange="calcular()">
+      <option value="gerente">Gerente</option>
+      <option value="jefe">Jefe</option>
+      <option value="cajero">Cajero</option>
+    </select>
+  </td>
+  
+  <td>
+   <input type="range" id="horas" min="1" max="60" value="1" class="form-control"><span id="vhoras">1</span>
+  </td>
+  <td>
+    <input type="range" id="anti" min="1" max="60" value="1" class="form-control"><span id="vanti">1</span>
+  </td>
+</tr>
+</table>
+<table class="table table-dark table-hover">
+  <tr>
+    <td colspan="2" class="bg-success "><h2>PERCEPCIONES</h2></td>
+    <td colspan="2" class="bg-danger"><h2>DEDUCCIONES</h2></td>
+  </tr>
+ 
+  <tr>
+    <td class="bg-light "><h4 class="text-black">TOTAL PERCEPCIONES</h4></td>
+    <td class=""><span id="perce"></span></td>
+    <td class="bg-light"><h4 class="text-black">TOTAL DEDUCCIONES</h4></td>
+    <td class=""><span id="dedu"></span></td>
+  </tr>
+  <tr>
+    <td colspan="2"class="bg-sucess"><h4>SALARIO NETO</h4></td>
+    <td colspan="2" class=""><span id="neto">$</span></td>
+  </tr>
+</table>
+<div class="card ">
+<button id="reset" class="btn btn-outline-info">Borrar</button>
+</div>
+  </div><br>
+  
+    <script src="sweetalert2.all.min.js"></script>
+    
+    <script src="bootstrap.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
